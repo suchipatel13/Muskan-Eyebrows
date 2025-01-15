@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <title>Muskan Eyebrows</title>
 </head>
 <body>
@@ -12,9 +13,8 @@
             <img src="images/Muskan_Eyebrows_Transparent.png" alt="Muskan Eyebrows Logo" class="logo">
         </div>
         <div class="tab-container">
-            <button class="tab" onclick="langName('Home', this, 'rgb(243, 122, 122)')" id="defaultOpen">HOME</button>
-            <button class="tab" onclick="langName('Services', this, 'rgb(243, 122, 122)')">Service</button>
-            <button class="tab" onclick="langName('Contact', this, 'rgb(243, 122, 122)')">Contact</button>
+            <button class="tab" onclick="langName('Home', this, 'rgb(243, 122, 122)')" id="defaultOpen">Home</button>
+            <button class="tab" onclick="langName('Services', this, 'rgb(243, 122, 122)')">Services</button>
             <button class="tab" onclick="langName('AboutUs', this, 'rgb(243, 122, 122)')">AboutUs</button>
         </div>
     </div>
@@ -25,16 +25,52 @@
             <br>
             <p class="special-text">Happy Skin Look Gorgeous On You</p>
         </div>
+    
+        <!-- Contact Us Section -->
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <br>
+            <p>We'd love to hear from you!</p>
+            <p><strong>Email:</strong> info@muskaneyebrows.com</p>
+            <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+            <p><strong>Address:</strong> 123 Beauty Lane, Glamour City, CA 12345</p>
+        </div>
+    
+        <!-- Book Now Section -->
+        <div class="Book">
+            <h3>Book Now</h3>
+        </div>
     </div>
+    
 
 
-
-    <div id="footer" class="footers">
-        <div class="Copyright">
-            <p>Copyright © 2024 Muskan Eyebrows</p>
+    <div id="Services" class="tabcontent">
+        <div class="service-page">
+            <h1>Our Services</h1>
+            <p>We offer a range of beauty services to enhance your look:</p>
+            <ul>
+                <li>Eyebrow Threading</li>
+                <li>Facial Waxing</li>
+                <li>Henna Tattoos</li>
+                <li>Skincare Treatments</li>
+            </ul>
+            <p>Contact us today to book your appointment and learn more about our services!</p>
         </div>
     </div>
 
+    <div id="AboutUs" class="tabcontent"></div>
+
+    
+
   
+    <div id="footer" class="footers">
+        <p>&copy; 2024 Muskan Eyebrows. All Rights Reserved.</p>
+    </div>
+
+
+
+
+    
+<script src="script.js"></script>
 </body>
 </html>
