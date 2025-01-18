@@ -20,8 +20,10 @@
 }
 
 body{
-    background-color: azure;
+    background-color: #ffE5EC; /* Light pink background */
     font-family: 'Open Sans', sans-serif; /* For paragraphs and general text */
+    color: #333; /* Neutral text color for contrast */
+
 }
 
 .tab-container{
@@ -39,8 +41,8 @@ body{
     padding: 15px 0px;
     font-size: 18px;
     cursor: pointer;
-    color:white;
-    background-color: pink;
+    color:black;
+    background-color: N460-3;
     text-align: center;
     border-radius: 10px;
     flex: 1;
@@ -58,9 +60,9 @@ body{
     align-items: center;
     position: relative;
     top: 50%;
-    left: 30%;
+    left: 25%;
     margin-bottom: 35px;
-    background-color: wheat;
+    background-color: #FFFEF2;
     justify-content: center;
     text-align: center;
     width: 300px;
@@ -83,9 +85,9 @@ body{
     align-items: center;
     position: relative;
     top: 50%;
-    left: 38%;
+    left: 30%;
     margin-bottom: 35px;
-    background-color: wheat;
+    background-color: #FFFEF2;
     justify-content: center;
     text-align: center;
     width: 300px;
@@ -114,5 +116,93 @@ body{
     border: solid;
     text-align: center;
     justify-content: center;
-    
+    border-radius: 20px;
+    margin-top: 40px;
+    padding: 12px;
+}
+
+.service-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures list items and other content stay left-aligned */
+    text-align: left;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.service-page h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+    align-self: center; /* Centers only the heading horizontally */
+    text-align: center; /* Centers text inside the heading */
+    width: 30%;
+}
+
+.dropdown-item{
+    margin-bottom: 20px auto ;
+    border: 1px solid;
+    border-radius: 12px;
+    overflow: hidden;
+    width:80%;
+    justify-content: flex-start;
+    text-align:left;
+    align-self: center;
+    padding:20px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    background-color: #FFFEF2;
+}
+
+.dropdown-header{
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    font-size:20px;
+    background-color: #FFFEF2;
+}
+
+.card{
+   padding: 20px;
+   border-top: 1px solid;
+   border-radius: 10px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+   margin: 10px;
+   width: calc(50% - 20px); 
+   text-align: left;
+   flex: 0 0 calc(50% - 20px);
+   margin-bottom: 20px;
+   background-color: #fff;
+}
+
+.card h2{
+    font-size: 20px; /* Larger font for titles */
+    margin-bottom: 10px; /* Spacing below the title */
+    color: #333; /* Darker color for the title */
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 14px; /* Standard font size for details */
+    line-height: 1.6; /* Improve readability with line spacing */
+    color: #666; /* Softer color for text */
+    margin-bottom: 10px; /* Add spacing below each paragraph */
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Full width for smaller screens */
+    }
 }

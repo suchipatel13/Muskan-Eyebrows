@@ -8,6 +8,7 @@
     <title>Muskan Eyebrows</title>
 </head>
 <body>
+    <!-- Header Section -->
     <div class="header-container">
         <div class="logo">
             <img src="images/Muskan_Eyebrows_Transparent.png" alt="Muskan Eyebrows Logo" class="logo">
@@ -15,62 +16,179 @@
         <div class="tab-container">
             <button class="tab" onclick="langName('Home', this, 'rgb(243, 122, 122)')" id="defaultOpen">Home</button>
             <button class="tab" onclick="langName('Services', this, 'rgb(243, 122, 122)')">Services</button>
-            <button class="tab" onclick="langName('AboutUs', this, 'rgb(243, 122, 122)')">AboutUs</button>
+            <button class="tab" onclick="langName('AboutUs', this, 'rgb(243, 122, 122)')">About Us</button>
         </div>
     </div>
+
+    <!-- Home Section -->
     <div id="Home" class="tabcontent">
         <div class="Welcome">
             <h1>Welcome</h1>
             <p>Smile</p>
-            <br>
             <p class="special-text">Happy Skin Look Gorgeous On You</p>
         </div>
-    
-        <!-- Contact Us Section -->
+
         <div class="contact-info">
             <h2>Contact Us</h2>
-            <br>
             <p>We'd love to hear from you!</p>
-            <p><strong>Email:</strong> info@muskaneyebrows.com</p>
-            <p><strong>Phone:</strong> +1 (123) 456-7890</p>
-            <p><strong>Address:</strong> 123 Beauty Lane, Glamour City, CA 12345</p>
+            <p><strong>Phone:</strong> (609) 200 3135</p>
+            <p><strong>Address:</strong> 865 Cooper Landing Rd #7, Cherry Hill Township, NJ 08002</p>
         </div>
-    
-        <!-- Book Now Section -->
+
         <div class="Book">
             <h3>Book Now</h3>
+            <p>Interested in our services? Check them out!</p>
+            <button class="book-now-button" onclick="navigateToServices()" aria-label="Navigate to Services">Explore Services</button>
         </div>
     </div>
-    
 
-
+    <!-- Services Section -->
     <div id="Services" class="tabcontent">
         <div class="service-page">
             <h1>Our Services</h1>
-            <p>We offer a range of beauty services to enhance your look:</p>
-            <ul>
-                <li>Eyebrow Threading</li>
-                <li>Facial Waxing</li>
-                <li>Henna Tattoos</li>
-                <li>Skincare Treatments</li>
-            </ul>
-            <p>Contact us today to book your appointment and learn more about our services!</p>
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Eyebrow Threading</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Men Eyebrows - $16.00</h2>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS. CASH TIP</p>
+                        <p>** BASE PRICES ARE LISTED **</p>
+                        <p>PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE THE SERVICE.</p>
+                        <p>NON-CASH ADJUSTMENT FEE APPLIES WHEN PAYING BY CARD.</p>
+                    </div>
+                    <div class="card">
+                        <h2>Threading Brow Shaping - $13.00</h2>
+                        <p>** PLEASE ARRIVE WITHOUT ANY MAKE UP/NO SKIN PRODUCTS **</p>
+                        <p>RECOMMEND NOT TO TWEEZE, WAX FOR 4 WEEKS, OR IN BETWEEN YOUR CYCLE.</p>
+                        <p>** BASE PRICES ARE LISTED ** PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED.</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE THE SERVICE.</p>
+                        <p>** NON-CASH ADJUSTMENT FEE WILL APPLY WHEN PAYING WITH CARD.</p>
+                        <p>** CASH TIP</p>
+                    </div>
+                    <div class="card">
+                        <h2>Walk In - FIT ME IN - ADDED ON THE WAITLIST - $20.00</h2>
+                        <p>The Booking Site shows NO AVAILABILITY/BOOKED OUT.</p>
+                        <p>Would like to be squeezed in? THIS SENDS A REQUEST AND ADDS YOU TO THE WAITLIST.</p>
+                        <p>REQUEST IS INSTANT BUT PLEASE ALLOW SOME TIME FOR THE REQUEST TO BE APPROVED.</p>
+                        <p>* ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <p>** BASE PRICES ARE LISTED ** PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE GETTING THE SERVICE.</p>
+                        <p>** NON-CASH ADJUSTMENT FEE APPLIES WHEN PAYING BY CARD.</p>
+                    </div>
+                    <div class="card">
+                        <h2>Brow and Lip - $23.00</h2>
+                        <p>** PLEASE ARRIVE WITHOUT ANY MAKE UP/NO SKIN PRODUCTS **</p>
+                        <p>RECOMMEND NOT TO TWEEZE, WAX FOR 4 WEEKS, OR IN BETWEEN YOUR CYCLE.</p>
+                        <p>** BASE PRICES ARE LISTED ** PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED.</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE THE SERVICE.</p>
+                        <p>NON-CASH ADJUSTMENT FEE APPLIES WHEN PAYING BY CARD.</p>
+                    </div>
+                    <div class="card">
+                        <h2>Chin - $11.00</h2>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <p>** BASE PRICES ARE LISTED ** PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE THE SERVICE.</p>
+                        <p>** NON-CASH ADJUSTMENT FEE APPLIES WHEN PAYING BY CARD. ** CASH TIP</p>
+                    </div>
+                    <div class="card">
+                        <h2>Forehead - $10.00</h2>
+                        <p>** PLEASE ARRIVE WITHOUT ANY MAKE UP/NO SKIN PRODUCTS **</p>
+                        <p>RECOMMEND NOT TO TWEEZE, WAX FOR 4 WEEKS, OR IN BETWEEN YOUR CYCLE.</p>
+                        <p>** BASE PRICES ARE LISTED ** PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED.</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE THE SERVICE.</p>
+                        <p>NON-CASH ADJUSTMENT FEE APPLIES WHEN PAYING BY CARD.</p>
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Eyelash Extensions</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <!-- Content for Eyelash Extensions -->
+                        <p>Details to be added...</p>
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Skin Care</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <!-- Content for Skin Care -->
+                        <p>Details to be added...</p>
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Add To Your Appointment</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <!-- Content for Add To Your Appointment -->
+                        <p>Details to be added...</p>
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Waxing</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <!-- Content for Add To Your Appointment -->
+                        <p>Details to be added...</p>
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Lash Lift Monthly Special</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <!-- Content for Add To Your Appointment -->
+                        <p>Details to be added...</p>
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Semi-Permanent Make Up</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <!-- Content for Add To Your Appointment -->
+                        <p>Details to be added...</p>
+                    </div>
+                </div>
+            </details>
         </div>
     </div>
 
-    <div id="AboutUs" class="tabcontent"></div>
+    <!-- About Us Section -->
+    <div id="AboutUs" class="tabcontent">
+        <h1>About Us</h1>
+        <p>Business Hours</p>
+        <sub>Sunday: Closed</sub><br>
+        <sub>Monday: 11:00 AM - 5:40 PM</sub><br>
+        <sub>Tuesday: Closed</sub><br>
+        <sub>Wednesday - Saturday: 11:00 AM - 6:00 PM</sub>
 
-    
+        <h2>Our Employees</h2>
+        <p>Muskan Sharma</p>
+        <p>S Sharma</p>
 
-  
+        <h3>Appointment Cancellation Policy</h3>
+        <p>
+            Your appointments are very important to us. Please provide a 24-hour notice for cancellations by texting (609) 200 3135. No-call or last-minute cancellations will incur a 50% fee.
+            Reservation deposits are non-refundable. All sales are final.
+        </p>
+    </div>
+
+    <!-- Footer -->
     <div id="footer" class="footers">
         <p>&copy; 2024 Muskan Eyebrows. All Rights Reserved.</p>
     </div>
 
-
-
-
-    
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
