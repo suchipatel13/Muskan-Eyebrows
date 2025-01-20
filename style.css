@@ -18,35 +18,44 @@
     width: 125px; 
     height: auto;
 }
-
-body{
-    background-color: #ffE5EC; /* Light pink background */
-    font-family: 'Open Sans', sans-serif; /* For paragraphs and general text */
-    color: #333; /* Neutral text color for contrast */
-
+body {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 224, 229, 0.8),
+        rgba(255, 192, 203, 0.6)
+    );
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
+
+
 
 .tab-container{
     width: 100%;
     display: flex;
-    flex: 1px;
+    gap: 15px;
     justify-content: space-between;
     margin: 0;
     padding: 0;
+    transform: translate()
+
 
 }
 
 .tab{
     border: solid;
     padding: 15px 0px;
-    font-size: 18px;
+    font-size: 25px;
     cursor: pointer;
     color:black;
     background-color: N460-3;
     text-align: center;
     border-radius: 10px;
     flex: 1;
-
+    font-family: 'Pacifico', cursive;
 }
 
 .contact-info{
@@ -60,12 +69,17 @@ body{
     align-items: center;
     position: relative;
     top: 50%;
-    left: 25%;
+    left: 2%;
     margin-bottom: 35px;
     background-color: #FFFEF2;
     justify-content: center;
     text-align: center;
     width: 300px;
+}
+.contact-info:hover,
+.contact-info:focus-visible{
+    transform: translateY(-1.00rem);
+    transition: transform 200ms;
 }
 .contact-info h2{
     text-align: center;
@@ -85,13 +99,19 @@ body{
     align-items: center;
     position: relative;
     top: 50%;
-    left: 30%;
+    left: 7%;
     margin-bottom: 35px;
     background-color: #FFFEF2;
     justify-content: center;
     text-align: center;
     width: 300px;
 }
+.Book:hover,
+.Book:focus-visible {
+    transform: translateY(-1.00rem);
+    transition: transform 200ms;
+}
+
 .Welcome h1 {
     font-size: 100px; /* Adjust heading size */
     margin: 10px 0; /* Optional: Add spacing */
@@ -100,16 +120,28 @@ body{
     justify-content: center;
     height: 100%;
     font-family: 'Playfair Display', serif; /* For headings and special text */
-
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
 }
+@keyframes slideUp {
+    0%{
+        transform: translateY(2rem);
+        opacity: 0;
+    }
 
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 .Welcome p, .Welcome p1 {
     text-align: center; /* Center the text */
-    font-size: 50px; /* Large text */
+    font-size: 45px; /* Large text */
     padding: 50px; /* Add padding inside the element */
     margin-top: 10px; /* Add spacing from the element above */
-    font-family: 'Playfair Display', serif; /* For headings and special text */
-
+    font-family: 'Lora', serif;
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
 }
 
 .footers{
@@ -206,3 +238,74 @@ body{
         width: 100%; /* Full width for smaller screens */
     }
 }
+/* General Styles for the About Us Section */
+.tabcontent {
+    padding: 20px;
+    border-radius: 9px;
+    margin: 20px auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Business Hours Section */
+#business-hours{
+    border-radius: 20px;
+    border: solid;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 35px;
+    background-color: #FFFEF2;
+    justify-content: left;
+    text-align: center;
+    width: 300px;
+    float: left;
+}
+
+
+/* Employees Section */
+#employees{
+    border-radius: 20px;
+    border: solid;
+    cursor: pointer;
+    display: table-row;
+    flex-direction: row;
+    padding: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    align-items: left;
+    position: relative;
+    margin-bottom: 35px;
+    background-color: #FFFEF2;
+    justify-content: left;
+    text-align: center;
+    width: 300px;
+    float:right;
+}
+
+/* Cancellation Policy Section */
+#cancellation-policy {
+    border-radius: 20px;
+    border: solid;
+    cursor: pointer;
+    display: table-row;
+    flex-direction: row;
+    padding: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    align-items: left;
+    position: relative;
+    margin-bottom: 35px;
+    background-color: #FFFEF2;
+    justify-content: left;
+    text-align: center;
+    width: 300px;
+}
+
+
+
