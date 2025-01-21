@@ -16,3 +16,19 @@ function langName(tabName, elmnt, color) {
 
 // Set default tab
 document.getElementById('defaultOpen').click();
+
+function navigateToServices() {
+    // Activate the Services tab (if using tabs)
+    document.querySelectorAll(".tabcontent").forEach(tab => {
+        tab.style.display = "none"; // Hide other tabs
+    });
+
+    // Show the Services tab
+    document.getElementById("Services").style.display = "block";
+
+    // Scroll to the Services section
+    document.getElementById("Services").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}

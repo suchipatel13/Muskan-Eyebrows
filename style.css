@@ -4,9 +4,10 @@
     box-sizing: border-box;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-optical-sizing: auto;
-     font-weight: 400;
-     font-style: bold;
-     size: 100vh;
+    font-weight: 400;
+    font-style: bold;
+    size: 100vh;
+    
  }
 
  .logo{
@@ -18,44 +19,68 @@
     width: 125px; 
     height: auto;
 }
+
+
+
 body {
-    background: linear-gradient(
-        135deg,
-        rgba(255, 224, 229, 0.8),
-        rgba(255, 192, 203, 0.6)
-    );
+    background:white;
     backdrop-filter: blur(20px) saturate(200%);
     -webkit-backdrop-filter: blur(20px) saturate(200%);
-    height: 100vh;
+    background-attachment: fixed; /* Fixes scrolling mismatch */
+    background-size: cover; /* Ensures gradient fully covers the viewport */
+    background-repeat: no-repeat; /* Prevents gradient tiling */
+    min-height: 100vh; /* Use min-height instead of height for flexibility */
     margin: 0;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: #333; /* Matches text color for readability */
+}
+.header-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space between logo and tabs */
+    padding: 10px 20px; /* Add padding for spacing */
+    background-color: white; /* Optional: Background color for the header */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    position: relative;/* Optional: Subtle border at the bottom */
+}
+
+/* Logo Centered */
+.logo {
+    flex: 1;
+    position: absolute;
+    left: 45%;
+}
+
+.logo img {
+    width: 120px; /* Adjust the logo size */
+    height: auto;
 }
 
 
 
 .tab-container{
-    width: 100%;
     display: flex;
-    gap: 15px;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    transform: translate()
-
+    gap: 22px;
+    margin-left: auto;
 
 }
 
 .tab{
-    border: solid;
-    padding: 15px 0px;
+    border: 1 px solid #c19a6b;
+    padding: 10px 20px;
     font-size: 25px;
     cursor: pointer;
-    color:black;
-    background-color: N460-3;
+    color:#333;
+    background-color: #FFD1DC;
     text-align: center;
-    border-radius: 10px;
-    flex: 1;
+    border-radius: 5px;
     font-family: 'Pacifico', cursive;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    justify-content: space-evenly;
+}
+.tab:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 .contact-info{
@@ -71,11 +96,13 @@ body {
     top: 50%;
     left: 2%;
     margin-bottom: 35px;
-    background-color: #FFFEF2;
+    background-color: #FFD1DC;
     justify-content: center;
     text-align: center;
     width: 300px;
 }
+
+
 .contact-info:hover,
 .contact-info:focus-visible{
     transform: translateY(-1.00rem);
@@ -83,10 +110,20 @@ body {
 }
 .contact-info h2{
     text-align: center;
+    font-family: 'Pacifico', cursive;
+    
+  
 }
 
 .contact-info p{
     text-align: center;
+    font-family: 'Pacifico', cursive;
+
+}
+
+.Book h3, .Book p {
+    font-family: 'Pacifico', cursive;
+
 }
 .Book{
     border-radius: 20px;
@@ -101,7 +138,7 @@ body {
     top: 50%;
     left: 7%;
     margin-bottom: 35px;
-    background-color: #FFFEF2;
+    background-color: #FFD1DC;
     justify-content: center;
     text-align: center;
     width: 300px;
@@ -111,6 +148,18 @@ body {
     transform: translateY(-1.00rem);
     transition: transform 200ms;
 }
+.book-now-button{
+    font-family: 'Pacifico', cursive;
+
+    padding: 10px 20px;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3 ease, tranform 0.3s ease;
+}
+
 
 .Welcome h1 {
     font-size: 100px; /* Adjust heading size */
@@ -144,14 +193,22 @@ body {
     animation: slideUp 1s ease-out forwards;
 }
 
-.footers{
-    border: solid;
+#footer {
+    border: solid rgba(0, 0, 0, 0.1); /* Subtle border for a clean design */
     text-align: center;
     justify-content: center;
     border-radius: 20px;
     margin-top: 40px;
     padding: 12px;
+    background: inherit; /* Inherit the body's background */
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    color: #333; /* Ensure footer text is visible */
+
 }
+
+
+
 
 .service-page {
     display: flex;
@@ -306,6 +363,10 @@ body {
     text-align: center;
     width: 300px;
 }
-
+.instagram-logo {
+    width: 40px; /* Set the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Add a hover effect */
+}
 
 
