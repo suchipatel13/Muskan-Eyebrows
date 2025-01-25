@@ -7,56 +7,50 @@
     font-weight: 400;
     font-style: bold;
     size: 100vh;
-    
- }
-
- .logo{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
- }
-.logo img {
-    width: 125px; 
-    height: auto;
 }
-
 
 
 body {
-    background:white;
-    backdrop-filter: blur(20px) saturate(200%);
-    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    background-color: #f6f6f6; /* Light neutral fallback */
     background-attachment: fixed; /* Fixes scrolling mismatch */
     background-size: cover; /* Ensures gradient fully covers the viewport */
     background-repeat: no-repeat; /* Prevents gradient tiling */
-    min-height: 100vh; /* Use min-height instead of height for flexibility */
-    margin: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-    color: #333; /* Matches text color for readability */
+    background: linear-gradient(to bottom, #fdf3e6, #f9f5ee 60%, #ffffff); /* Luxurious cream gradient */
+    min-height: 100vh; /* Ensures gradient spans the entire viewport */
+    margin: 0; /* Removes default margins */
+    overflow-y: auto; /* Allows vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    color: #555; /* Softer dark text for readability */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    line-height: 1.6; /* Better text readability */
 }
+
 .header-container {
     display: flex;
-    align-items: center; /* Align items vertically in the center */
+    align-items: left; /* Align items vertically in the center */
     justify-content: space-between; /* Space between logo and tabs */
-    padding: 10px 20px; /* Add padding for spacing */
-    background-color: white; /* Optional: Background color for the header */
+    padding: 10px 30px; /* Add padding for spacing */
+    background:transparent;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
     position: relative;/* Optional: Subtle border at the bottom */
+
 }
 
 /* Logo Centered */
 .logo {
-    flex: 1;
-    position: absolute;
-    left: 45%;
+    position: relative;
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the very left */
+    padding: 10; /* Remove unnecessary padding */
+    display: flex; /* Ensure alignment */
+    align-items: center; /* Vertically center logo content */
+    justify-content: flex-start; /* Align items to the left */
 }
 
 .logo img {
-    width: 120px; /* Adjust the logo size */
+    width: 160px; /* Adjust the logo size */
     height: auto;
 }
-
 
 
 .tab-container{
@@ -66,26 +60,29 @@ body {
 
 }
 
-.tab{
-    border: 1 px solid #c19a6b;
-    padding: 10px 20px;
-    font-size: 25px;
-    cursor: pointer;
-    color:#333;
-    background-color: #FFD1DC;
-    text-align: center;
-    border-radius: 5px;
-    font-family: 'Pacifico', cursive;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
-    justify-content: space-evenly;
-}
-.tab:hover {
-    transform: translateY(-2px); /* Slight lift on hover */
+.tab {
+    font-size: 25px; /* Text size */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    color: #333; /* Text color */
+    text-align: center; /* Align text */
+    font-family: 'Pacifico', cursive; /* Stylish font */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    background: none; /* Remove background color */
+    border: none; /* Remove any border */
+    padding: 0; /* Remove padding for no box appearance */
+    
 }
 
-.contact-info{
+.tab:hover {
+    color: rgb(218, 191, 231); /* Change text color on hover */
+    transform: translateY(-2px); /* Subtle lift on hover */
+    text-decoration: underline;
+
+}
+
+.contact-info {
     border-radius: 20px;
-    border: solid;
+    border: solid 1px #ddd; /* Optional: define border color */
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -94,14 +91,14 @@ body {
     align-items: center;
     position: relative;
     top: 50%;
-    left: 2%;
+    left: 25%;
     margin-bottom: 35px;
-    background-color: #FFD1DC;
+    background-color: white ;
     justify-content: center;
     text-align: center;
     width: 300px;
+    box-shadow: 0px 4px 6px rgba(104, 103, 103, 0.1); /* Subtle shadow */
 }
-
 
 .contact-info:hover,
 .contact-info:focus-visible{
@@ -125,24 +122,23 @@ body {
     font-family: 'Pacifico', cursive;
 
 }
-.Book{
+.Book {
     border-radius: 20px;
-    border: solid;
+    border: solid 1px #ddd;
     cursor: pointer;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Arrange content vertically inside the box */
     padding: 15px 20px;
-    display: inline-block;
-    align-items: center;
-    position: relative;
-    top: 50%;
-    left: 7%;
-    margin-bottom: 35px;
-    background-color: #FFD1DC;
-    justify-content: center;
-    text-align: center;
+    background-color: white;
+    justify-content: center; /* Centers content vertically */
+    text-align: center; /* Centers text horizontally */
     width: 300px;
+    box-shadow: 0px 4px 6px rgba(104, 103, 103, 0.1); /* Subtle shadow */
+    position: absolute; /* Make the position relative to the page */
+    top: 115%; /* Center it vertically */
+    right: 25%; /* Move it to the right */
 }
+
 .Book:hover,
 .Book:focus-visible {
     transform: translateY(-1.00rem);
@@ -168,21 +164,27 @@ body {
     padding: 50px;
     justify-content: center;
     height: 100%;
-    font-family: 'Playfair Display', serif; /* For headings and special text */
+    font-family: Didot;  /* For headings and special text */
     opacity: 0;
-    animation: slideUp 1s ease-out forwards;
+    animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; /* Apply the new animation */
 }
-@keyframes slideUp {
-    0%{
-        transform: translateY(2rem);
-        opacity: 0;
-    }
 
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
+/* Define the keyframes */
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
 }
+
 .Welcome p, .Welcome p1 {
     text-align: center; /* Center the text */
     font-size: 45px; /* Large text */
@@ -190,21 +192,21 @@ body {
     margin-top: 10px; /* Add spacing from the element above */
     font-family: 'Lora', serif;
     opacity: 0;
-    animation: slideUp 1s ease-out forwards;
+    animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; /* Apply the new animation */
 }
 
 #footer {
-    border: solid rgba(0, 0, 0, 0.1); /* Subtle border for a clean design */
-    text-align: center;
+    border: solid rgba(0, 0, 0, 0.1); /* Subtle border for design */
+    text-align: center; /* Center-align text */
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 20px; /* Rounded edges */
     margin-top: 40px;
     padding: 12px;
-    background: inherit; /* Inherit the body's background */
+    background: inherit; /* Match the page background */
     backdrop-filter: blur(20px) saturate(200%);
     -webkit-backdrop-filter: blur(20px) saturate(200%);
-    color: #333; /* Ensure footer text is visible */
-
+    color: #333; /* Text color */
+    font-size: 14px; /* Standard footer font size */
 }
 
 
@@ -226,41 +228,50 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 20px;
-    font-family: 'Open Sans', sans-serif;
-    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 15px;
     border-style: solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: whitesmoke;
     align-self: center; /* Centers only the heading horizontally */
     text-align: center; /* Centers text inside the heading */
-    width: 30%;
+    
 }
 
 .dropdown-item{
-    margin-bottom: 20px auto ;
-    border: 1px solid;
-    border-radius: 12px;
+    margin-bottom: 20px auto;
     overflow: hidden;
-    width:80%;
+    width:50%;
     justify-content: flex-start;
-    text-align:left;
+    text-align:center;
     align-self: center;
     padding:20px;
     font-family: 'Playfair Display', serif;
     display: flex;
     flex-direction: column;
     font-size: 15px;
-    background-color: #FFFEF2;
+    display: inline-block;
+    align-self: center;
 }
 
 .dropdown-header{
-    padding: 15px;
+    padding: 5px;
     cursor: pointer;
-    border: none;
+    border-style: solid;
+    border-radius: 15px;
     font-size:20px;
-    background-color: #FFFEF2;
+    text-align: center;
+    font-family: cursive;
+    width:100%;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next row if needed */
+    gap: 20px; /* Spacing between cards */
+    justify-content: space-around; /* Space around the cards */
+
 }
 
 .card{
@@ -269,11 +280,15 @@ body {
    border-radius: 10px;
    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
    margin: 10px;
-   width: calc(50% - 20px); 
    text-align: left;
-   flex: 0 0 calc(50% - 20px);
+   flex: 1 1 calc(50% - 40px); /* Two cards in a row with space accounted for */
+   max-width: calc(50% - 40px); /* Ensures the cards don't exceed half the width */
+   box-sizing: border-box; /* Includes padding and border in width calculations */
    margin-bottom: 20px;
    background-color: #fff;
+   justify-content:space-around ;
+   width: 100%;
+
 }
 
 .card h2{
@@ -295,16 +310,106 @@ body {
         width: 100%; /* Full width for smaller screens */
     }
 }
+
+.schedule-button {
+    padding: 10px 30px;
+    background-color: #FF69B4; /* Pinkish color */
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Pacifico', cursive;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.schedule-button:hover {
+    background-color: #e05692; /* Darker pink on hover */
+    transform: translateY(-2px); /* Slight lift */
+}
+
+.schedule-button:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.modal-content {
+    position: absolute; /* Position relative to the modal */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by half the modal's size */
+    background-color: white; /* Background of the modal */
+    padding: 20px; /* Padding inside the modal */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Shadow */
+    max-width: 500px; /* Set a max width for the modal */
+    width: 90%; /* Make it responsive */
+    max-height: 80%; /* Allow scrolling if content exceeds height */
+    overflow-y: auto; /* Enable scrolling inside the modal */
+}
+.modal-content h4 {
+    display: block;
+    text-align: center;
+    margin: 0 0 2px 0; /* Ensure no top margin and proper spacing below */
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="phone"],
+select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+}
+select optgroup{
+    padding: 5px ;
+    display: block;
+    border-style: solid;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+select option{
+    padding: 5px;
+}
+label{
+    display: block;
+    font-size: 20px;
+    margin: 5px;
+}
+
+optgroup ::-ms-value
 /* General Styles for the About Us Section */
 .tabcontent {
     padding: 20px;
     border-radius: 9px;
     margin: 20px auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-
 }
+
 
 /* Business Hours Section */
 #business-hours{
@@ -318,10 +423,10 @@ body {
     position: relative;
     margin-bottom: 35px;
     background-color: #FFFEF2;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 300px;
-    float: left;
 }
 
 
@@ -335,14 +440,13 @@ body {
     padding: 20px;
     margin-top: 20px;
     display: inline-block;
-    align-items: left;
-    position: relative;
+    align-items: wrap;
     margin-bottom: 35px;
     background-color: #FFFEF2;
     justify-content: left;
     text-align: center;
     width: 300px;
-    float:right;
+    margin: 0px;
 }
 
 /* Cancellation Policy Section */
@@ -368,5 +472,6 @@ body {
     height: auto; /* Maintain aspect ratio */
     transition: transform 0.3s ease, filter 0.3s ease; /* Add a hover effect */
 }
+
 
 
